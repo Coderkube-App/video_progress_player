@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:video_progress_player/video_progress_player.dart';
-
+import 'package:video_player_platform_interface/video_player_platform_interface.dart';
+import 'fake_video_player_platform.dart';
 void main() {
+  setUp(() {
+    VideoPlayerPlatform.instance = FakeVideoPlayerPlatform();
+  });
+
   group('VideoProgressPlayer Widget Tests', () {
     testWidgets('VideoProgressPlayer renders loading indicator initially',
         (WidgetTester tester) async {
