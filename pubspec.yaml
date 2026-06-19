@@ -1,7 +1,9 @@
 name: video_progress_player
 description: A Flutter video player built on top of video_player with resume watching, progress tracking, completion detection, and fullscreen support.
 version: 0.0.1
-
+repository: https://github.com/Coderkube-App/video_progress_player
+homepage: https://github.com/Coderkube-App/video_progress_player
+issue_tracker: https://github.com/Coderkube-App/video_progress_player/issues
 environment:
   sdk: ">=3.0.0 <4.0.0"
   flutter: ">=3.22.0"

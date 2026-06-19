@@ -84,6 +84,8 @@ class VideoProgressPlayer extends StatefulWidget {
   }) : super(key: key);
 
   /// Convenience constructor to play a video from a network URL.
+  ///
+  /// The [url] must point to a valid video resource.
   factory VideoProgressPlayer.network({
     Key? key,
     required String url,
@@ -116,6 +118,9 @@ class VideoProgressPlayer extends StatefulWidget {
     );
   }
 
+  /// Creates a player from an asset bundle.
+  ///
+  /// The [assetPath] must be a valid path defined in your pubspec.yaml.
   factory VideoProgressPlayer.asset({
     Key? key,
     required String assetPath,
@@ -148,6 +153,9 @@ class VideoProgressPlayer extends StatefulWidget {
     );
   }
 
+  /// Creates a player from a local file system file.
+  ///
+  /// The [file] must point to a valid video file on the device.
   factory VideoProgressPlayer.file({
     Key? key,
     required File file,
