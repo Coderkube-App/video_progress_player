@@ -3,7 +3,7 @@ import '../storage/progress_storage_provider.dart';
 import '../analytics/analytics_provider.dart';
 import '../player/fullscreen_manager.dart';
 
-/// Controls playback programmatically and acts as a facade over 
+/// Controls playback programmatically and acts as a facade over
 /// the underlying [VideoPlayerController].
 class VideoProgressController {
   VideoPlayerController? _videoPlayerController;

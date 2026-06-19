@@ -68,7 +68,7 @@ class VideoProgressPlayer extends StatefulWidget {
 
   /// Creates a [VideoProgressPlayer] from a given [VideoSource].
   const VideoProgressPlayer({
-    Key? key,
+    super.key,
     required this.videoSource,
     this.controller,
     this.resumeKey,
@@ -81,7 +81,7 @@ class VideoProgressPlayer extends StatefulWidget {
     this.onProgressChanged,
     this.onFullscreenChanged,
     this.onCompleted,
-  }) : super(key: key);
+  });
 
   /// Convenience constructor to play a video from a network URL.
   ///

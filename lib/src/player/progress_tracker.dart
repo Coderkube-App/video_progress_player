@@ -8,7 +8,7 @@ class ProgressTracker {
   final void Function(VideoProgress)? onProgressChanged;
   final CompletionStrategy? completionStrategy;
   final VoidCallback? onCompleted;
-  
+
   bool _hasCompleted = false;
 
   ProgressTracker({
@@ -22,13 +22,14 @@ class ProgressTracker {
 
   void _onVideoChanged() {
     if (!controller.value.isInitialized) return;
-    
+
     final position = controller.value.position;
     final duration = controller.value.duration;
     if (duration == Duration.zero) return;
 
-    final percentage = (position.inMilliseconds / duration.inMilliseconds) * 100;
-    
+    final percentage =
+        (position.inMilliseconds / duration.inMilliseconds) * 100;
+
     final progress = VideoProgress(
       watched: position,
       total: duration,
