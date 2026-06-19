@@ -4,7 +4,7 @@ import 'package:video_progress_player/video_progress_player.dart';
 void main() => runApp(const ExampleApp());
 
 class ExampleApp extends StatelessWidget {
-  const ExampleApp({Key? key}) : super(key: key);
+  const ExampleApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,7 @@ class ExampleApp extends StatelessWidget {
 }
 
 class BasicExample extends StatelessWidget {
-  const BasicExample({Key? key}) : super(key: key);
+  const BasicExample({super.key});
   @override
   Widget build(BuildContext context) {
     return VideoProgressPlayer.network(
@@ -47,7 +47,7 @@ class BasicExample extends StatelessWidget {
 }
 
 class ResumeExample extends StatelessWidget {
-  const ResumeExample({Key? key}) : super(key: key);
+  const ResumeExample({super.key});
   @override
   Widget build(BuildContext context) {
     return VideoProgressPlayer.network(
@@ -60,14 +60,15 @@ class ResumeExample extends StatelessWidget {
 }
 
 class AdvancedExample extends StatelessWidget {
-  const AdvancedExample({Key? key}) : super(key: key);
+  const AdvancedExample({super.key});
   @override
   Widget build(BuildContext context) {
     return const VideoProgressPlayer(
       videoSource:
           NetworkVideoSource(url: 'https://www.w3schools.com/html/mov_bbb.mp4'),
       analyticsProvider: NoAnalyticsProvider(), // Inject custom analytics here
-      config: VideoProgressConfig(enableResume: true, enablePlaybackSpeed: true),
+      config:
+          VideoProgressConfig(enableResume: true, enablePlaybackSpeed: true),
     );
   }
 }
