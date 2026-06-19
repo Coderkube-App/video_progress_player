@@ -9,12 +9,12 @@ class DefaultControls extends StatefulWidget {
   final bool isFullscreen;
 
   const DefaultControls({
-    Key? key,
+    super.key,
     required this.controller,
     this.videoProgressController,
     this.enablePlaybackSpeed = false,
     this.isFullscreen = false,
-  }) : super(key: key);
+  });
 
   @override
   State<DefaultControls> createState() => _DefaultControlsState();
@@ -72,12 +72,14 @@ class _DefaultControlsState extends State<DefaultControls> {
 
             if (isFinished) {
               widget.controller.seekTo(Duration.zero);
-              widget.videoProgressController?.play() ?? widget.controller.play();
+              widget.videoProgressController?.play() ??
+                  widget.controller.play();
             } else {
               value.isPlaying
                   ? widget.videoProgressController?.pause() ??
                       widget.controller.pause()
-                  : widget.videoProgressController?.play() ?? widget.controller.play();
+                  : widget.videoProgressController?.play() ??
+                      widget.controller.play();
             }
           },
         ),

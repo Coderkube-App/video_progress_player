@@ -1,4 +1,4 @@
-library video_progress_player;
+library;
 
 export 'src/controller/video_progress_controller.dart';
 export 'src/player/video_progress_player.dart';
