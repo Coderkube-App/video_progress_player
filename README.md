@@ -115,7 +115,10 @@ VideoProgressPlayer.network(
 
 ## Resume Watching
 
-Provide a `resumeKey` to automatically save and restore the user's last watched position.
+Provide a `resumeKey` to automatically save and restore the user's last watched position. 
+
+> [!NOTE]
+> The `resumeKey` should be a unique identifier from your database for the specific video being played (e.g., a Video ID like `'course_42_lesson_1'` or `'movie_uuid_8f73b2'`). Do not hardcode a generic string like `'lesson_1'` for all videos, or progress will be overwritten!
 
 ```dart
 VideoProgressPlayer.network(
